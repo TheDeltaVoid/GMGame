@@ -1,10 +1,12 @@
 // INPUT
 move_input = keyboard_check(ord("D")) - keyboard_check(ord("A"));
 jump_pressed = keyboard_check_pressed(vk_space);
-dash_pressed = keyboard_check_pressed(ord("K"));
+dash_pressed = mouse_check_button_pressed(mb_right);
 
 // GRAVITY
-vsp += grv;
+if (dash_timer <= 0) {
+	vsp += grv;
+}
 
 // GROUND CHECK + COYOTE TIME
 if (place_meeting(x, y + 1, oHitbox) || check_on_platform()) {
