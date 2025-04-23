@@ -3,12 +3,32 @@ hsp = 0;
 if (keyboard_check(ord("D"))) hsp += movespeed;
 if (keyboard_check(ord("A"))) hsp -= movespeed;
 
+
+
+
+
 // Springen mit Space
-if (place_meeting(x, y + 1, oHitbox)) {
+var onGround = place_meeting(x, y + 1, oHitbox);
+
+// Plattform als Boden nur, wenn du *darüber* stehst
+var onPlatform = false;
+var plat = instance_place(x, y + 1, oPlatform);
+if (plat != noone && bbox_bottom <= plat.bbox_top + 2) {
+    onPlatform = true;
+}
+
+if (onGround || onPlatform) {
+
     if (keyboard_check_pressed(vk_space)) {
         vsp = jumpspeed;
     }
 }
+
+
+
+
+
+
 
 // Gravitation
 vsp += grv;
