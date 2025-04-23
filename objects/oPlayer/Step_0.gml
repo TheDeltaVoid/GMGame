@@ -55,6 +55,7 @@ if (dash_pressed && can_dash) {
     can_dash = false;
     dash_timer = dash_time;
     hsp = move_input != 0 ? move_input * dash_speed : image_xscale * dash_speed;
+	vsp = 0;
 }
 
 // DASH TIMER
