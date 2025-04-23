@@ -22,6 +22,32 @@ if (place_meeting(x, y + 1, oHitbox) || check_on_platform()) {
 }
 
 // RESET JUMPS & DASH
+// INPUT
+move_input = keyboard_check(ord("D")) - keyboard_check(ord("A"));
+jump_pressed = keyboard_check_pressed(vk_space);
+jump_held = keyboard_check(vk_space);
+jump_released = keyboard_check_released(vk_space);
+dash_pressed = mouse_check_button_pressed(mb_right);
+
+if (move_input != 0) {
+	image_xscale = move_input;
+}
+
+// GRAVITY
+if (dash_timer <= 0) {
+	vsp += grv;
+}
+
+// GROUND CHECK + COYOTE TIME
+if (place_meeting(x, y + 1, oHitbox) || check_on_platform()) {
+    grounded = true;
+    coyote_timer = coyote_time_max;
+} else {
+    grounded = false;
+    if (coyote_timer > 0) coyote_timer--;
+}
+
+// RESET JUMPS & DASH
 if (grounded) {
     jumps_left = 1;
     can_dash = true;
@@ -40,14 +66,30 @@ if (!grounded && wall_dir != 0 && vsp > 0) {
     jumps_left = 1;
 }
 
-// JUMPING
+// VARIABLER JUMP (NEU)
 if (jump_pressed) {
     if (coyote_timer > 0 || wallslide || jumps_left > 0) {
         vsp = jumpspeed;
+        jump_timer = 0;
+        jump_active = true;
+
         if (!grounded && !wallslide) jumps_left--;
         if (wallslide) hsp = -wall_dir * movespeed * 1.2;
         coyote_timer = 0;
     }
+}
+
+// Jump halten = höherer Sprung
+if (jump_active && jump_held) {
+    if (jump_timer < jump_time_max) {
+        vsp -= 0.8; // Feintuning möglich
+        jump_timer++;
+    }
+}
+
+// Loslassen beendet den Sprungschub
+if (jump_released) {
+    jump_active = false;
 }
 
 // DASH
@@ -55,7 +97,7 @@ if (dash_pressed && can_dash) {
     can_dash = false;
     dash_timer = dash_time;
     hsp = move_input != 0 ? move_input * dash_speed : image_xscale * dash_speed;
-	vsp = 0;
+    vsp = 0;
 }
 
 // DASH TIMER
@@ -85,7 +127,6 @@ x += hsp;
 // KOLLISION Y (One-Way-Plattformen)
 var plat = instance_place(x, y + vsp, oPlatform);
 if (vsp > 0 && plat != noone && (y + bbox_bottom - bbox_top) <= plat.bbox_top + 2) {
-
     while (!place_meeting(x, y + sign(vsp), oPlatform)) y += sign(vsp);
     vsp = 0;
 } else if (place_meeting(x, y + vsp, oHitbox)) {
@@ -93,7 +134,6 @@ if (vsp > 0 && plat != noone && (y + bbox_bottom - bbox_top) <= plat.bbox_top + 
     vsp = 0;
 }
 y += vsp;
-
 
 
 

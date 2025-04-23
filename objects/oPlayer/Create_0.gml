@@ -1,12 +1,21 @@
 // Movement
 hsp = 0;
 vsp = 0;
-grv = 0.5;
+grv = 0.45;
 jumpspeed = -10;
-movespeed = 4;
+movespeed = 5;
 accel = 0.5;
 decel = 0.3;
-maxspeed = 4;
+maxspeed = 6;
+
+jump_active = false;
+jump_timer = 0;
+jump_time_max = 15; // anpassen für Gefühl
+
+
+jump_pressed = false;
+jump_time = 0;
+
 
 // Jump States
 jumps_left = 1;
@@ -18,7 +27,7 @@ wall_dir = 0;
 
 // Dash
 can_dash = true;
-dash_speed = 12;
+dash_speed = 15;
 dash_time = 8;
 dash_timer = 0;
 
