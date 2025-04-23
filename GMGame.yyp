@@ -47,6 +47,7 @@
     {"id":{"name":"sHitbox","path":"sprites/sHitbox/sHitbox.yy",},},
     {"id":{"name":"sPlatform","path":"sprites/sPlatform/sPlatform.yy",},},
     {"id":{"name":"sPlayer","path":"sprites/sPlayer/sPlayer.yy",},},
+    {"id":{"name":"sPlayer2","path":"sprites/sPlayer2/sPlayer2.yy",},},
     {"id":{"name":"sRoom1","path":"sprites/sRoom1/sRoom1.yy",},},
     {"id":{"name":"sTemporary","path":"sprites/sTemporary/sTemporary.yy",},},
   ],
