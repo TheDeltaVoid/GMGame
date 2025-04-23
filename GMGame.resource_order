@@ -21,6 +21,7 @@
     {"name":"oPlatform","order":3,"path":"objects/oPlatform/oPlatform.yy",},
     {"name":"oPlayer","order":2,"path":"objects/oPlayer/oPlayer.yy",},
     {"name":"sBackground","order":3,"path":"sprites/sBackground/sBackground.yy",},
+    {"name":"sPlatform","order":4,"path":"sprites/sPlatform/sPlatform.yy",},
     {"name":"sPlayer","order":2,"path":"sprites/sPlayer/sPlayer.yy",},
     {"name":"sRoom1","order":1,"path":"sprites/sRoom1/sRoom1.yy",},
     {"name":"sTemporary","order":4,"path":"sprites/sTemporary/sTemporary.yy",},
