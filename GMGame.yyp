@@ -35,6 +35,7 @@
   },
   "name":"GMGame",
   "resources":[
+    {"id":{"name":"oHitbox","path":"objects/oHitbox/oHitbox.yy",},},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
     {"id":{"name":"sHitbox","path":"sprites/sHitbox/sHitbox.yy",},},
   ],
