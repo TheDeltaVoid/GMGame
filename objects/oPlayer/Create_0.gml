@@ -32,3 +32,13 @@ coyote_time_max = 6;
 coyote_timer = 0;
 
 depth = -10
+
+
+
+
+global.spawn_shop_x = 450
+global.spawn_shop_y = 380
+
+
+global.spawn_room1_x = 1980
+global.spawn_room1_y = 700

@@ -93,3 +93,42 @@ if (vsp > 0 && plat != noone && (y + bbox_bottom - bbox_top) <= plat.bbox_top + 
     vsp = 0;
 }
 y += vsp;
+
+
+
+
+
+
+
+
+//WARP TO SHOP: 
+
+
+// Prüfen, ob der Spieler mit oWarpShop kollidiert
+if (place_meeting(x, y, oWarpShop)) {
+    // Prüfen, ob die W-Taste gedrückt wird
+    if (keyboard_check_pressed(ord("W"))) {
+        // Warp in den Raum rShop
+        room_goto(rShop);
+		
+		if (variable_global_exists("spawn_shop_x") && variable_global_exists("spawn_shop_y")) {
+    x = global.spawn_shop_x;
+    y = global.spawn_shop_y;
+}
+
+    }
+}
+// Prüfen, ob der Spieler mit oWarpShop kollidiert
+if (place_meeting(x, y, oWarpShop)) {
+    // Prüfen, ob die W-Taste gedrückt wird
+    if (keyboard_check_pressed(ord("S"))) {
+        // Warp in den Raum rShop
+        room_goto(rRoom1);
+		
+		if (variable_global_exists("spawn_room1_x") && variable_global_exists("spawn_room1_y")) {
+    x = global.spawn_room1_x;
+    y = global.spawn_room1_y;
+}
+    }
+}
+
