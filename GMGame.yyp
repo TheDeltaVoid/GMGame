@@ -36,6 +36,7 @@
   "name":"GMGame",
   "resources":[
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
+    {"id":{"name":"sHitbox","path":"sprites/sHitbox/sHitbox.yy",},},
   ],
   "resourceType":"GMProject",
   "resourceVersion":"2.0",
