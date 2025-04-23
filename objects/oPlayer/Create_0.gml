@@ -12,6 +12,11 @@ jump_active = false;
 jump_timer = 0;
 jump_time_max = 15; // anpassen für Gefühl
 
+if (room != rShop) {
+    is_topdown = false;
+}
+
+
 
 jump_pressed = false;
 jump_time = 0;

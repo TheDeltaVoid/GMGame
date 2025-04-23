@@ -1,9 +1,12 @@
 {
   "$GMObject":"",
-  "%Name":"oWarpShop",
-  "eventList":[],
+  "%Name":"oShopKeeperTrigger",
+  "eventList":[
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+  ],
   "managed":true,
-  "name":"oWarpShop",
+  "name":"oShopKeeperTrigger",
   "overriddenProperties":[],
   "parent":{
     "name":"Objects",
@@ -28,8 +31,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"sWarp",
-    "path":"sprites/sWarp/sWarp.yy",
+    "name":"sTemporary",
+    "path":"sprites/sTemporary/sTemporary.yy",
   },
   "spriteMaskId":null,
   "visible":false,
