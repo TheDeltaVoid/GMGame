@@ -37,6 +37,7 @@
   "resources":[
     {"id":{"name":"oEnemy","path":"objects/oEnemy/oEnemy.yy",},},
     {"id":{"name":"oHitbox","path":"objects/oHitbox/oHitbox.yy",},},
+    {"id":{"name":"oPlayer","path":"objects/oPlayer/oPlayer.yy",},},
     {"id":{"name":"rRoom1","path":"rooms/rRoom1/rRoom1.yy",},},
     {"id":{"name":"sHitbox","path":"sprites/sHitbox/sHitbox.yy",},},
     {"id":{"name":"sPlayer","path":"sprites/sPlayer/sPlayer.yy",},},
