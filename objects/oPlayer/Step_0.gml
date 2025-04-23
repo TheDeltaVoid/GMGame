@@ -3,6 +3,10 @@ move_input = keyboard_check(ord("D")) - keyboard_check(ord("A"));
 jump_pressed = keyboard_check_pressed(vk_space);
 dash_pressed = mouse_check_button_pressed(mb_right);
 
+if (move_input != 0) {
+	image_xscale = move_input;
+}
+
 // GRAVITY
 if (dash_timer <= 0) {
 	vsp += grv;
