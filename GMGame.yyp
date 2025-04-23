@@ -36,7 +36,9 @@
   "name":"GMGame",
   "resources":[
     {"id":{"name":"oHitbox","path":"objects/oHitbox/oHitbox.yy",},},
+    {"id":{"name":"oPlayer","path":"objects/oPlayer/oPlayer.yy",},},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
+    {"id":{"name":"sBackground","path":"sprites/sBackground/sBackground.yy",},},
     {"id":{"name":"sHitbox","path":"sprites/sHitbox/sHitbox.yy",},},
   ],
   "resourceType":"GMProject",
